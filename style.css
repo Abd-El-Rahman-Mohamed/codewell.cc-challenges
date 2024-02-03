@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    margin: 0;
+    background-color: #f2eee4;
+    padding-left: 150px;
+    padding-right: 72px;
+    padding-top: 24px;
+    padding-bottom: 65px;
+    font-family: 'Inter', sans-serif;
+    color: #8d8c8a;
+}
+
+/* Configuring and unsetting some styling for 'a', and 'ul' elements */
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+}
+
+header ul {
+    display: flex;
+    column-gap: 40px;
+    padding-right: 2px;
+    align-items: center;
+}
+
+/* Designing the list containing 'sign in' link and 'try for free' button*/
+header ul#sign-in {
+    column-gap: 24px;
+}
+
+header ul#sign-in li:first-child {
+    padding-top: 3px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul li::after {
+    content: '';
+    display: block;
+    height: 30px;
+    width: 85px;
+    position: absolute;
+}
+
+nav div.products-list {
+    display: none;
+}
+
+nav div.products-list::before {
+    content: ' ';
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: green;
+    top: 0;
+    left: 70px;
+    z-index: -1;
+}
+/* nav div.products-list::after {
+    content: ' ';
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    background-color: blue;
+    top: -50px;
+    left: 45px;
+    z-index: -1;
+} */
+
+nav li.products-item:hover div.products-list,
+nav div.products-list:hover::after, 
+div.products-list:hover {
+    width: 350px;
+    min-height: 275px;
+    height: fit-content;
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 62px;
+    left: -22px;
+    border-radius: 15px;
+    padding-inline: 10px;
+    padding-block: 16px;
+    padding-inline: 34px;
+    border: 2px solid green;
+}
+
+div.products-list section {
+    height: 74px;
+}
+
+div.products-list section p:first-child {
+    display: flex;
+    column-gap: 7px;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+div.products-list section p:nth-child(2) {
+    margin-top: 0px;
+    padding-left: 31px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+button.try-for-free {
+    width: 154px;
+    height: 56px;
+    background-color: #0e3d1c;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+main h1 {
+    color: initial;
+    font-size: 3.8em;
+    margin-bottom: 0px;
+}
+
+#text-container h1 span {
+    color: #f4bf05;
+}
+
+#text-container p {
+    margin-top: 9px;
+    line-height: 23px;
+}
+
+#text-container p img {
+    max-width: 24px;
+}
+
+#text-container .rating-statement {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#text-container .rating-statement img {
+    padding-left: 17px;
+}
+
+img#hero-image-container {
+    margin-top: -50px;
+    max-width: 345px;
+    float: right;
+}
+
+#hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #f1eff1;
+    margin-top: -50px;
+    width: 345px;
+    height: 412px;
+    border: 5px solid #54ac7e;
+    background-color: #251c3b;
+    background-size: cover;
+    border-radius: 23px;
+    float: right;
+}
+
+#hero-container div:first-child {
+    align-self: flex-end;
+    margin-right: 29px;
+    margin-top: 25px;
+    border: 1px solid transparent;
+    height: 27px;
+    border-radius: 50%;
+    width: 27px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#hero-container > img {
+    object-fit: cover;
+    align-self: center;
+    width: 105px;
+    height: 105px;
+    border: 3px solid #f1eff1;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#hero-container div:last-child {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    gap: 10px;
+}
+
+#hero-container div:last-child img {
+    width: 13px;
+    height: 30px;
+    border-radius: 35px;
+    object-fit: contain;
+    padding-inline: 12px;
+    background-color: rgba(128,128,128,0.4);
+}
+
+#hero-container div:last-child span {
+    display: inline-block;
+    background-color: rgba(128,128,128,0.4);
+    width: fit-content;
+    height: 100%;
+    line-height: 200%;
+    padding-inline: 15px;
+    border: 1px solid transperant;
+    border-radius: 50px;
+    text-align: center;
+}
+
+footer .trust-statement {
+    width: 100%;
+    margin-left: -3px;
+    text-align: center;
+}
+
+div.footer-images-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1030px;
+    margin: 0 auto;
+    column-gap: 125px;
+    margin-top: 25px;
+}
